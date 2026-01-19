@@ -1,17 +1,28 @@
-<%-- 
-    Document   : index
-    Created on : 15 ene 2026, 17:18:41
-    Author     : Camilo
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Prueba</title>
+</head>
+<body>
+
+    <h1>Datos del usuario</h1>
+
+    <form action="SvUsuarios" method="POST">
+        
+        <p>
+            <label>Email:</label> <!--Nombre-->
+            <input type="text" name="email">
+        </p>
+
+        <p>
+            <label>Contraseña:</label> <!<!--telefono-->
+            <input type="text" name="contraseña">
+        </p>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
 </html>
