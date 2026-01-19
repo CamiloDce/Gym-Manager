@@ -23,6 +23,12 @@
 
         <button type="submit">Enviar</button>
     </form>
-
+        
+    <h1>Ver lista de usuarios</h1>
+    <p>Para ver datos de usuarios cargados, click en el siguiente botón</p>
+    <form action="SvUsuarios" method="GET">
+        <button type="submit" > Mostrar Usuarios </button>
+    </form>
+        
 </body>
 </html>
