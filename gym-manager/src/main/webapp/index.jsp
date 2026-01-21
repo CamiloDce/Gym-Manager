@@ -1,42 +1,34 @@
-<%-- 
-    Document   : index
-    Created on : Jan 19, 2026, 12:08:43 PM
-    Author     : Kevin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
   <meta charset="UTF-8">
   <title>Registro</title>
-  <style>
-   body     { font-family: sans-serif; 
-              display: flex; 
-              justify-content: 
-              center; 
-              align-items: 
-              center; 
-              height: 100vh; 
-              background: #0b0f1a; }
-   .box    { background: #ffff; 
-             padding: 20px; 
-             border-radius: 10px; 
-             box-shadow: 0 0 10px #cccc; 
-             width: 280px
-             text-align: center; }
-  </style>
 </head>
 <body>
 
-  <div class="box">
+  <div>
     <form action="SvUsers" method="POST">
-      <h2>Iniciar Sesión</h2>
-      <input type="text" name="username" placeholder="Usuario" required><br>
-      <input type="password" name="password" placeholder="Contraseña" required><br>
-      <button type="submit">Entrar</button>
+        <p><label>DNI: </label> <input type="text" name="dni"></p>
+        <p><label>Nombre: </label> <input type="text" name="nombre"></p>
+        <p><label>Apellido: </label> <input type="text" name="apellido"></p>
+        <p><label>Email: </label> <input type="email" name="email"></p>
+        <p><label>Contraseña: </label> <input type="password" name="password"></p>
+        <p><label>Rol: </label> 
+            <select name="rol" required>
+            <option value="">-- Seleccionar rol --</option>
+            <option value="MIEMBRO">Miembro</option>
+            <option value="STAFF">Staff</option>
+        </select></p>
+        <p><label>Activo: </label> <input type="checkbox" name="activo" value="true"></p>
+        <button type="submit">Mandar</button>
     </form>
   </div>
 
+    
+    <h1>Mostrar usuarios</h1>
+    <form action="SvUsers" method="GET">
+        <button type="submit">Mostrar Usuarios</button>
+    </form>
 </body>
 </html>
