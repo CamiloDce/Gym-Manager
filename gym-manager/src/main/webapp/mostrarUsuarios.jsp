@@ -16,10 +16,17 @@
                 for(Usuario usu : listaUsuarios){
         %>
         
-                    <p><b>Usuario N°<%=cont%></b></p> 
+                    <p>
+                        <b> <%=usu.getNombre()%>
+                            <%=usu.getApellido()%> -
+                            <%=usu.getActivo() ? "Activo" : "Inactivo" %>
+                        </b>
+                    <p>  
+                    <p>Rol: <%=usu.getRol()%></p>                  
+                    <p>DNI: <%=usu.getDni()%></p>
                     <p>Email: <%=usu.getEmail()%></p>
-                    <p>Contraseña: <%=usu.getContraseña()%></p>
-                    <<p>---------------------------------------</p>
+                    <p>Contraseña: <%=usu.getContraseña()%></p>                                                        
+                    <p>---------------------------------------</p>
                     <% cont = cont + 1; %>
                     
         <% } %>
