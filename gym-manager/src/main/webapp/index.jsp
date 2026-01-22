@@ -52,12 +52,22 @@
         </p>
         
         <button type="submit">Enviar</button>
-    </form>
-        
+    </form>        
+    
     <h1>Ver lista de usuarios</h1>
     <p>Para ver datos de usuarios cargados, click en el siguiente botón</p>
     <form action="SvUsuarios" method="GET">
         <button type="submit" > Mostrar Usuarios </button>
+    </form>
+    
+    <h1>Eliminar Usuario</h1>
+    <p>Ingrese ID de usuario a eliminar</p>
+    <form action="SvEliminar" method="POST">
+        <p>
+            <label>ID</label> 
+            <input type="text" name="id_usuario">
+        </p>
+        <button type="submit" > Eliminar Usuario </button>
     </form>
         
 </body>

@@ -21,7 +21,8 @@
                             <%=usu.getApellido()%> -
                             <%=usu.getActivo() ? "Activo" : "Inactivo" %>
                         </b>
-                    <p>  
+                    <p>
+                    <p>ID: <%=usu.getId()%></p>
                     <p>Rol: <%=usu.getRol()%></p>                  
                     <p>DNI: <%=usu.getDni()%></p>
                     <p>Email: <%=usu.getEmail()%></p>
