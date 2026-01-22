@@ -1,11 +1,20 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+HttpSession sesion = request.getSession(false);
+String nombre = (sesion != null) ? (String) sesion.getAttribute("nombre") : null;
+%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <title>HOME</title>
     </head>
-    <body>
-        <h1>Hello World!</h1>
+    <body>    
+        <h1>¡Hola, <%= nombre %>!</h1>
+        <a href="login.jsp">
+            <button type="button" class="button">Cerrar sesión</button>
+        </a>
     </body>
 </html>
