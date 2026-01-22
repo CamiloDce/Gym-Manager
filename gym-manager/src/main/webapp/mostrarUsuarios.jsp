@@ -16,13 +16,14 @@
                            
          %>
          <p><b>Usuario n: <%=cont%></b></p>
+         <p>ID: <%=usu.getId()%></p>
          <p>DNI: <%=usu.getDni()%></p>
          <p>Nombre: <%=usu.getNombre()%></p>
          <p>Apellido: <%=usu.getApellido ()%></p>
          <p>Email: <%=usu.getEmail()%></p>
          <p>Contraseña: <%=usu.getPassword()%></p>
          <p>Rol: <%=usu.getRol ()%></p>
-         <p>Activo: <%=usu.isActivo ()%></p>
+         <p>Activo: <%=usu.getActivo ()%></p>
          <% cont = cont + 1;%>
         <% } %>
     </body>

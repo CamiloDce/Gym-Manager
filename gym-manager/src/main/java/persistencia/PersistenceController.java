@@ -2,6 +2,7 @@ package persistencia;
 
 import java.util.List;
 import logic.Usuario;
+import persistencia.exceptions.NonexistentEntityException;
 
 public class PersistenceController {
     
@@ -13,5 +14,13 @@ public class PersistenceController {
     
     public List<Usuario> traerUsuarios () {
         return usuJpa.findUsuarioEntities();
+    }
+
+    public void deleteUser(int id_delete) {
+        try {
+            usuJpa.destroy(id_delete);
+        } catch (NonexistentEntityException ex) {
+            System.getLogger(PersistenceController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
     }
 }

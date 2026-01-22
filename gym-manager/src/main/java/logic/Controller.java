@@ -13,4 +13,9 @@ public class Controller {
     public List<Usuario> traerUsuarios () {
         return persisControl.traerUsuarios();
     }
+
+    public void deleteUser(int id_delete) {
+        persisControl.deleteUser(id_delete);
+        
+    }
 }
