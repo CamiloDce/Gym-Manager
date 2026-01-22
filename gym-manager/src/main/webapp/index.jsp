@@ -38,6 +38,12 @@
         <button type="submit">ELIMINAR Usuario</button>
     </form>
     
+    <h1>EDITAR usuarios</h1>
+    <form action="SvEdit" method="GET">
+        <p><label>Id: </label> <input type="text" name="id_editUser"></p>
+        <button type="submit">Editar Usuario</button>
+    </form>
+    
     
 </body>
 </html>

@@ -18,4 +18,14 @@ public class Controller {
         persisControl.deleteUser(id_delete);
         
     }
+
+    public Usuario traerUser(int id_edit) {
+       return persisControl.traerUser(id_edit);
+      
+    }
+
+    public void editUsuario(Usuario usu) {
+           persisControl.editUsuario(usu);  
+    }
+
 }

@@ -23,4 +23,16 @@ public class PersistenceController {
             System.getLogger(PersistenceController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         }
     }
+
+    public Usuario traerUser(int id_edit) {
+        return usuJpa.findUsuario(id_edit);
+    }
+
+    public void editUsuario(Usuario usu) {
+        try {
+            usuJpa.edit(usu);
+        } catch (Exception ex) {
+            System.getLogger(PersistenceController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }
 }
