@@ -11,45 +11,18 @@
 
     <form action="SvUsuarios" method="POST">
         
-        <p>
-            <label>Email:</label> 
-            <input type="text" name="email">
-        </p>
-
-        <p>
-            <label>Contraseña:</label> 
-            <input type="text" name="contraseña">
-        </p>
-        
-        <p>
-            <label>Dni:</label> 
-            <input type="text" name="dni">
-        </p>
-        
-        <p>
-            <label>
-               <label>Activo: </label> <input type="checkbox" name="activo" value="true">
-            </label> 
-            
-        </p>
-        
-        <p>
-            <label>Rol:</label> 
+        <p><label>Email:</label><input type="text" name="email"></p>
+        <p><label>Contraseña:</label><input type="text" name="contraseña"></p>        
+        <p><label>Dni:</label><input type="text" name="dni"></p>        
+        <p><label><label>Activo: </label> 
+                <input type="checkbox" name="activo" value="true"></label></p>        
+        <p><label>Rol:</label> 
             <select name="rol">
                 <option value="Miembro">Miembro</option>
                 <option value="Staff">Staff</option>
-            </select>
-        </p>
-        
-        <p>
-            <label>Nombre:</label> 
-            <input type="text" name="nombre">
-        </p>
-        
-        <p>
-            <label>Apellido:</label> 
-            <input type="text" name="apellido">
-        </p>
+            </select></p>        
+        <p><label>Nombre:</label><input type="text" name="nombre"></p>        
+        <p><label>Apellido:</label><input type="text" name="apellido"></p>
         
         <button type="submit">Enviar</button>
     </form>        
@@ -69,6 +42,20 @@
         </p>
         <button type="submit" > Eliminar Usuario </button>
     </form>
+    
+    <h1>Edit Usuario</h1>
+    <p>Usuario a editar</p>
+    <form action="SvEditar" method="GET">
+        <p>
+            <label>ID</label> 
+            <input type="text" name="id_usuarioEdit">
+        </p>
+        <button type="submit" > Editar Usuario </button>
+    </form>
+    
+    
+    
+    
         
 </body>
 </html>

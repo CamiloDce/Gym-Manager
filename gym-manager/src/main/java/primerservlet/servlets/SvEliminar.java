@@ -31,9 +31,7 @@ public class SvEliminar extends HttpServlet {
             throws ServletException, IOException {
         int id_eliminar = Integer.parseInt(request.getParameter("id_usuario"));
         
-        control.borrarUsuario(id_eliminar);
-        response.sendRedirect("mostrarUsuarios.jsp");
-        
+        control.borrarUsuario(id_eliminar);       
         
     }
 
