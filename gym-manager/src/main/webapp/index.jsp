@@ -2,48 +2,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-  <meta charset="UTF-8">
-  <title>Registro</title>
-</head>
-<body>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <title>LOGIN</title>
+    </head>
+    <body>
 
-  <div>
-    <form action="SvUsers" method="POST">
-        <p><label>DNI: </label> <input type="text" name="dni"></p>
-        <p><label>Nombre: </label> <input type="text" name="nombre"></p>
-        <p><label>Apellido: </label> <input type="text" name="apellido"></p>
-        <p><label>Email: </label> <input type="email" name="email"></p>
-        <p><label>Contraseña: </label> <input type="password" name="password"></p>
-        <p><label>Rol: </label> 
-            <select name="rol" required>
-            <option value="">-- Seleccionar rol --</option>
-            <option value="MIEMBRO">Miembro</option>
-            <option value="STAFF">Staff</option>
-        </select></p>
-        <p><label>Activo: </label> <input type="checkbox" name="activo" value="true"></p>
-        <button type="submit">Mandar</button>
-    </form>
-  </div>
-
-    
-    <h1>Mostrar usuarios</h1>
-    <form action="SvUsers" method="GET">
-        <button type="submit">Mostrar Usuarios</button>
-    </form>
-    
-    
-    <h1>Eliminar usuarios</h1>
-    <form action="SvDelete" method="POST">
-        <p><label>Id: </label> <input type="text" name="id_user"></p>
-        <button type="submit">ELIMINAR Usuario</button>
-    </form>
-    
-    <h1>EDITAR usuarios</h1>
-    <form action="SvEdit" method="GET">
-        <p><label>Id: </label> <input type="text" name="id_editUser"></p>
-        <button type="submit">Editar Usuario</button>
-    </form>
-    
-    
-</body>
+      <div class="box">
+        <form action="SvLogin" method="POST">
+          <h2>Iniciar Sesión</h2>
+          <input type="email" name="email" placeholder="Email" required><br>
+          <input type="password" name="password" placeholder="Contraseña" required><br>
+          <button type="submit" class="button">Entrar</button>
+        </form>
+          <% if (request.getParameter("error") != null) { %>
+            <p style="color:red">Email o contraseña incorrectos</p>
+          <% } %>
+      </div>
+     </body>
 </html>

@@ -1,8 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<%
-HttpSession sesion = request.getSession(false);
-String nombre = (sesion != null) ? (String) sesion.getAttribute("nombre") : null;
+<%@ page import="logic.Usuario" %>
+<%  
+    HttpSession sesion = request.getSession(false);
+    Usuario usuario = (sesion != null) ? (Usuario) sesion.getAttribute("usuario") : null;
 %>
 <!DOCTYPE html>
 <html>
@@ -12,8 +12,8 @@ String nombre = (sesion != null) ? (String) sesion.getAttribute("nombre") : null
         <title>HOME</title>
     </head>
     <body>    
-        <h1>¡Hola, <%= nombre %>!</h1>
-        <a href="login.jsp">
+        <h1>¡Hola, <%= usuario.getNombre() %>!</h1>
+        <a href="index.jsp">
             <button type="button" class="button">Cerrar sesión</button>
         </a>
     </body>

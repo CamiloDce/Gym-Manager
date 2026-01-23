@@ -27,5 +27,19 @@ public class Controller {
     public void editUsuario(Usuario usu) {
            persisControl.editUsuario(usu);  
     }
+    
+    public Usuario validarLogin(String email, String password) {
 
+    List<Usuario> usuarios = traerUsuarios();
+
+    for (Usuario user : usuarios) {
+        if (user.getEmail().equals(email)
+                && user.getPassword().equals(password)
+                && user.getActivo()) {
+
+            return user;
+        }
+    }
+    return null;
+}
 }

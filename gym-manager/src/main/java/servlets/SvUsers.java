@@ -49,8 +49,6 @@ Controller control = new Controller();
         Rol rol = Rol.valueOf(request.getParameter("rol"));
         Boolean activo = "true".equals(request.getParameter("activo"));
         
-        System.out.println("email es: " + email);
-        System.out.println("contraseña es: " + password);
         
         Usuario usu = new Usuario ();
         usu.setDni(dni);
@@ -71,6 +69,6 @@ Controller control = new Controller();
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }

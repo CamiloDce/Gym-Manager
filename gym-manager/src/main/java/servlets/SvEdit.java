@@ -49,8 +49,7 @@ public class SvEdit extends HttpServlet {
         Rol rol = Rol.valueOf(request.getParameter("rol"));
         Boolean activo = "true".equals(request.getParameter("activo"));
         
-        System.out.println("email es: " + email);
-        System.out.println("contraseña es: " + password);
+
         
         Usuario usu = (Usuario) request.getSession().getAttribute("usuEdit");
         usu.setDni(dni);
