@@ -6,7 +6,7 @@
     HttpSession sesion = request.getSession(false);
     Usuario usuario = (sesion != null) ? (Usuario) sesion.getAttribute("usuarioLogueado") : null;
 
-if (usuario == null) {
+if (usuario == null || !usuario.getRol().name().equals("Staff")) {
     response.sendRedirect("index.jsp");
     return;
 }
@@ -66,6 +66,13 @@ if (usuario == null) {
             <input type="text" name="id_usuarioEdit">
         </p>
         <button type="submit" > Editar Usuario </button>
+    </form>
+    
+    <form action="SvLogout" method="GET">
+        <p>
+            <label>ACA SALIS MAQUINA</label>
+        </p>
+        <button type="submit" > Cerrar Sesión </button>
     </form>
     
     

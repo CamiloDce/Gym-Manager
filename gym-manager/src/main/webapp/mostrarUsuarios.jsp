@@ -2,6 +2,18 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    HttpSession sesion = request.getSession(false);
+    Usuario usuarioLog = (sesion != null) ? (Usuario) sesion.getAttribute("usuarioLogueado") : null;
+
+    if (usuarioLog == null || !usuarioLog.getRol().name().equals("Staff")) {
+        response.sendRedirect("miembro.jsp");
+        return;
+    }
+%>
+
+
 <html>
     <head>
         <link rel="stylesheet" href="css/mostrarUsuarios.css">
