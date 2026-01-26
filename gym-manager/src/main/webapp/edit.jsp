@@ -1,10 +1,27 @@
 
 <%@page import="logic.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%  
+    HttpSession sesion = request.getSession(false);
+    Usuario usuario = (sesion != null) ? (Usuario) sesion.getAttribute("usuario") : null;
+
+if (usuario == null) {
+    response.sendRedirect("index.jsp");
+    return;
+}
+
+ if (usuario == null || !usuario.getRol().name().equals("STAFF")) {
+        response.sendRedirect("index.jsp");
+    return;
+    }
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -24,8 +41,17 @@
                     <option value="STAFF">Staff</option>
                 </select> value="<%=usu.getRol() %>"</p>
                 <p><label>Activo: </label> <input type="checkbox" name="activo" value="true" value="<%=usu.getActivo()%>"></p>
-                <button type="submit">Guardar</button>
+                <button class="button" type="submit">Guardar</button>
             </form>
           </div>
+                
+        <div>
+            <form>
+                <a href="panel.jsp">
+                     <button type="button" class="button">Volver</button>    
+                </a>
+            </form> 
+        </div>
+                
     </body>
 </html>
