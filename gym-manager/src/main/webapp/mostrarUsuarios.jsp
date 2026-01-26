@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="css/mostrarUsuarios.css">
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mostrar Usuarios</title>
     </head>
@@ -16,18 +18,27 @@
                 for(Usuario usu : listaUsuarios){
         %>
         
-                    <p>
-                        <b> <%=usu.getNombre()%>
-                            <%=usu.getApellido()%> -
-                            <%=usu.getActivo() ? "Activo" : "Inactivo" %>
-                        </b>
-                    <p>
-                    <p>ID: <%=usu.getId()%></p>
-                    <p>Rol: <%=usu.getRol()%></p>                  
-                    <p>DNI: <%=usu.getDni()%></p>
-                    <p>Email: <%=usu.getEmail()%></p>
-                    <p>Contraseña: <%=usu.getContraseña()%></p>                                                        
-                    <p>---------------------------------------</p>
+                    <div class="usuario-card">
+
+    <div class="usuario-header">
+        <%=usu.getNombre()%> <%=usu.getApellido()%> -
+        <span class="<%=usu.getActivo() ? "activo" : "inactivo"%>">
+            <%=usu.getActivo() ? "Activo" : "Inactivo"%>
+        </span>
+    </div>
+
+    <div class="usuario-datos">
+        <p><b>ID:</b> <%=usu.getId()%></p>
+        <p><b>Rol:</b> <%=usu.getRol()%></p>
+        <p><b>DNI:</b> <%=usu.getDni()%></p>
+        <p><b>Email:</b> <%=usu.getEmail()%></p>
+        <p><b>Contraseña:</b> <%=usu.getContraseña()%></p>
+    </div>
+
+    <div class="divisor"></div>
+
+</div>
+
                     <% cont = cont + 1; %>
                     
         <% } %>  

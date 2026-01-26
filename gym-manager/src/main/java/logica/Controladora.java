@@ -29,5 +29,17 @@ public class Controladora {
         controlPersis.editarUsuario(usu);
         
     }
+
+    public Usuario validarLogin(String email, String contraseña) {
+        List<Usuario> listaUsuarios = traerUsuarios();
+        
+        for (Usuario usu : listaUsuarios) {
+            if (usu.getEmail().equals(email)&&
+                    usu.getContraseña().equals(contraseña)){
+                    return usu;
+            }
+        }
+        return null;
+    }
     
 }

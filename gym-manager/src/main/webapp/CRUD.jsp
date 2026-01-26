@@ -1,0 +1,77 @@
+<%@ page import="logica.Usuario" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+
+<%
+    HttpSession sesion = request.getSession(false);
+    Usuario usuario = (sesion != null) ? (Usuario) sesion.getAttribute("usuarioLogueado") : null;
+
+if (usuario == null) {
+    response.sendRedirect("index.jsp");
+    return;
+}
+%>
+<html>
+
+<head>
+    
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/CRUD.css">
+    <title>Formulario de Prueba</title>
+</head>
+<body>
+
+    <h1>Datos del usuario</h1>
+
+    <form action="SvUsuarios" method="POST">
+        
+        <p><label>Email:</label><input type="text" name="email"></p>
+        <p><label>Contraseña:</label><input type="text" name="contraseña"></p>        
+        <p><label>Dni:</label><input type="text" name="dni"></p>        
+        <p><label><label>Activo: </label> 
+                <input type="checkbox" name="activo" value="true"></label></p>        
+        <p><label>Rol:</label> 
+            <select name="rol">
+                <option value="Miembro">Miembro</option>
+                <option value="Staff">Staff</option>
+            </select></p>        
+        <p><label>Nombre:</label><input type="text" name="nombre"></p>        
+        <p><label>Apellido:</label><input type="text" name="apellido"></p>
+        
+        <button type="submit">Enviar</button>
+    </form>        
+    
+    <h1>Ver lista de usuarios</h1>
+    <p>Para ver datos de usuarios cargados, click en el siguiente botón</p>
+    <form action="SvUsuarios" method="GET">
+        <button type="submit" > Mostrar Usuarios </button>
+    </form>
+    
+    <h1>Eliminar Usuario</h1>
+    <p>Ingrese ID de usuario a eliminar</p>
+    <form action="SvEliminar" method="POST">
+        <p>
+            <label>ID</label> 
+            <input type="text" name="id_usuario">
+        </p>
+        <button type="submit" > Eliminar Usuario </button>
+    </form>
+    
+    <h1>Edit Usuario</h1>
+    <p>Usuario a editar</p>
+    <form action="SvEditar" method="GET">
+        <p>
+            <label>ID</label> 
+            <input type="text" name="id_usuarioEdit">
+        </p>
+        <button type="submit" > Editar Usuario </button>
+    </form>
+    
+    
+    
+    
+        
+</body>
+
+</html>
