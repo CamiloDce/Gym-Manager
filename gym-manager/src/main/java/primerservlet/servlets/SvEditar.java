@@ -55,7 +55,7 @@ Controladora control = new Controladora();
         
         control.editarUsuario(usu);
         
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("CRUD.jsp");
         
     }
 

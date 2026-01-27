@@ -23,7 +23,6 @@ public class SvEliminar extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
     }
  
     @Override
@@ -32,7 +31,7 @@ public class SvEliminar extends HttpServlet {
         int id_eliminar = Integer.parseInt(request.getParameter("id_usuario"));
         
         control.borrarUsuario(id_eliminar);       
-        
+        response.sendRedirect("CRUD.jsp");
     }
 
     @Override

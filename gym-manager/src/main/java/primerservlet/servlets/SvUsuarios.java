@@ -61,7 +61,7 @@ Controladora control = new Controladora ();
         usu.setContraseña(contraseña);
         
         control.crearUsuario(usu);
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("CRUD.jsp");
 
     }
 
