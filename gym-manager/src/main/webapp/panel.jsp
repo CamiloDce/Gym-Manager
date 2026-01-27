@@ -22,9 +22,7 @@ if (usuario == null) {
   <title>Registro</title>
 </head>
 <body>
-    <div class="panel">
-    
-        
+    <div class="panel">      
         <section class="seccion">
             <h1>Crear usuarios</h1>
             <form action="SvUsers" method="POST">

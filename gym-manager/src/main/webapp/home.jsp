@@ -6,7 +6,7 @@
     Usuario usuario = (sesion != null) ? (Usuario) sesion.getAttribute("usuario") : null;
 
 if (usuario == null) {
-    response.sendRedirect("login.jsp");
+    response.sendRedirect("index.jsp");
     return;
 }
 %>
@@ -28,13 +28,27 @@ if (usuario == null) {
                     <a href="panel.jsp">
                         <button type="button" class="button">Panel</button>    
                     </a>
-                </form> 
+                </form>
+            </section>
+            <section class="seccion">
+                <form action="SvContador" method="POST">
+                    <button class="button" type="submit" name="accion" value="sumar">
+                        Entró una persona
+                    </button>
+
+                    <button class="button" type="submit" name="accion" value="restar">
+                        Salió una persona
+                    </button>
+                </form>
             </section>
             <% } %>
 
             <% if (usuario.getRol() == Rol.MIEMBRO) { %>
                 <p>Anda!</p>
             <% } %>
+            
+            <h2>Personas dentro del gimnasio</h2>
+            <p>Total: <strong><%= application.getAttribute("contador") %></strong></p>
 
             <form action="SvLogout" method="GET">
                 <a href="logout">
