@@ -1,0 +1,14 @@
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\logica\Controladora.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\logica\Rol.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\logica\Usuario.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\persistencia\ControladoraPersistencia.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\persistencia\exceptions\IllegalOrphanException.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\persistencia\exceptions\PreexistingEntityException.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\persistencia\UsuarioJpaController.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\primerservlet\servlets\SvContador.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\primerservlet\servlets\SvEditar.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\primerservlet\servlets\SvEliminar.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\primerservlet\servlets\SvLogin.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\primerservlet\servlets\SvLogout.java
+E:\Proyecto-GIM\Gym-Manager\gym-manager\src\main\java\primerservlet\servlets\SvUsuarios.java
